@@ -1,3 +1,4 @@
+// Hamster class
 class Hamster {
     constructor(owner = '', name, price = 15) {
         this.owner = owner;
@@ -17,6 +18,7 @@ class Hamster {
 const jerry = new Hamster('moon', 'jerry');
 console.log(jerry.getPrice());
 
+// Person class
 class Person {
     constructor(name, age = 0, height = 0, weight = 0, mood = 0, hamsters = [], bankAccount = 0) {
         this.name = name,
@@ -58,4 +60,42 @@ class Person {
         this.mood += 10;
         this.bankAccount -= hamster.getPrice();
     }
+}
+
+// Story
+// 1.
+const Timmy = new Person('Timmy');
+// 2.
+for (i = 0; i < 5; i++) {
+    Timmy.ageUp();
+}
+// 3.
+for (i = 0; i < 5; i++) {
+    Timmy.eat();
+}
+// 4.
+for (i = 0; i < 5; i++) {
+    Timmy.exercise();
+}
+// 5.
+for (i = 0; i < 9; i++) {
+    Timmy.ageUp();
+}
+// 6.
+const Gus = new Hamster('Gus');
+// 7.
+Gus.owner = 'Timmy';
+// 8.
+Timmy.buyHamster(Gus);
+// 9.
+for (i = 0; i < 15; i++) {
+    Timmy.ageUp();
+}
+// 10.
+for (i = 0; i < 2; i++) {
+    Timmy.eat();
+}
+// 11.
+for (i = 0; i < 2; i++) {
+    Timmy.exercise();
 }

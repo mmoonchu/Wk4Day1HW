@@ -15,8 +15,8 @@ class Hamster {
         return this.price;
     }
 }
-const jerry = new Hamster('moon', 'jerry');
-console.log(jerry.getPrice());
+// const jerry = new Hamster('moon', 'jerry');
+// console.log(jerry.getPrice());
 
 // Person class
 class Person {
@@ -99,3 +99,23 @@ for (i = 0; i < 2; i++) {
 for (i = 0; i < 2; i++) {
     Timmy.exercise();
 }
+
+// Chef Make Dinners
+class Dinner {
+    constructor(appetizer, entree, dessert) {
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+}
+
+class Chef {
+    makeDinner(appetizer, entree, dessert) {
+        return new Dinner(appetizer, entree, dessert)
+    }
+}
+
+const Remy = new Chef;
+console.log(Remy.makeDinner('app1', 'entree1', 'dessert1'));
+console.log(Remy.makeDinner('app2', 'entree2', 'dessert2'));
+console.log(Remy.makeDinner('app3', 'entree3', 'lavacake'));
